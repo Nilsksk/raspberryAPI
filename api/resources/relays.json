@@ -2,23 +2,11 @@
     "relay": [
         {
             "id": 0,
-            "name": "Zimmer 1"
+            "name": "Zimmer 0"
         },
         {
             "id": 1,
-            "name": "Zimmer 2"
-        },
-        {
-            "id": 2,
-            "name": "Zimmer 3"
-        },
-        {
-            "id": 3,
-            "name": "Zimmer 4"
-        },
-        {
-            "id": 4,
-            "name": "Zimmer 5"
+            "name": "Zimmer 1"
         }
     ]
 }
