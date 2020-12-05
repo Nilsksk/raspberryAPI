@@ -25,7 +25,7 @@ class Relay(Resource):
 
         for i in range(len(data)):
             if data[i]['relay_number'] == int(args['relay_number']):
-                return 'Relay with ID: {id} already exists.'.format(id=args['relay_number']), 401
+                return 'Relay with ID: {id} already exists.'.format(id=args['relay_number']), 400
 
         add_new_relay(args['name'], int(args['relay_number']), args['state'])
 
@@ -42,7 +42,7 @@ class Relay(Resource):
         for i in range(len(data)):
             if data[i]['relay_number'] == int(args['relay_number']):
                 if data[i]['state'] == args['state']:
-                    return 'Relay is already {current_state}'.format(current_state=args['state']), 401
+                    return 'Relay is already {current_state}'.format(current_state=args['state']), 400
                 else:
                     data[i]['state'] = args['state']
                     update_relay(data)
