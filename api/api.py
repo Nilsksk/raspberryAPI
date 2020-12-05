@@ -1,10 +1,12 @@
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
+from flask_cors import CORS
 from api.resources.set_resources import add_new_relay, update_relay
 from api.resources.get_resources import get_all_relays
 from gpio_control.gpio_control import turn_on_relays, turn_off_relays
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"*": {"origins": "*"}})
 api = Api(app)
 
 
