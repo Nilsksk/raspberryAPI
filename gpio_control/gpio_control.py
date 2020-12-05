@@ -29,7 +29,7 @@ def turn_on_relays():
 
     for i in range(len(data)):
         if data[i]['state'] == "on":
-            GPIO.output(int(data[i]['relay_number']), GPIO.HIGH)
+            GPIO.output(int(data[i]['relay_number']), GPIO.LOW)
 
 
 def turn_off_relays():
@@ -38,4 +38,4 @@ def turn_off_relays():
 
     for i in range(len(data)):
         if data[i]['state'] == "off":
-            GPIO.output(int(data[i]['relay_number']), GPIO.LOW)
+            GPIO.output(int(data[i]['relay_number']), GPIO.HIGH)
