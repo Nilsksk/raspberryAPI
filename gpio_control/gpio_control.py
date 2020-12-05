@@ -1,7 +1,6 @@
 import RPi.GPIO as GPIO
 import json
 
-
 GPIO.setmode(GPIO.BOARD)
 
 GPIO.setup(3, GPIO.OUT)
