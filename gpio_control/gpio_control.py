@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 import json
+import time
 
 GPIO.setmode(GPIO.BOARD)
 
@@ -23,6 +24,7 @@ GPIO.output(21, GPIO.LOW)
 
 
 def turn_on_relays():
+    time.sleep(5)
     with open("../api/resources/relays.json", "r") as json_file:
         data = json.load(json_file)
 
