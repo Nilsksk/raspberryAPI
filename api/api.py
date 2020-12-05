@@ -42,14 +42,12 @@ class Relay(Resource):
         for i in range(len(data)):
             if data[i]['relay_number'] == int(args['relay_number']):
                 if data[i]['state'] == args['state']:
+                    turn_off_relays()
                     return 'Relay is already {current_state}'.format(current_state=args['state']), 401
                 else:
                     data[i]['state'] = args['state']
                     update_relay(data)
-                    if args['state'] == "on":
-                        turn_on_relays()
-                    elif args['state'] == "off":
-                        turn_off_relays()
+                    turn_on_relays()
                     return 200
 
 
