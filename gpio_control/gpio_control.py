@@ -24,12 +24,18 @@ GPIO.output(21, GPIO.LOW)
 
 
 def turn_on_relays():
-    time.sleep(5)
-    print("test")
     with open("api/resources/relays.json", "r") as json_file:
         data = json.load(json_file)
-        print(data)
 
     for i in range(len(data)):
         if data[i]['state'] == "on":
             GPIO.output(int(data[i]['relay_number']), GPIO.HIGH)
+
+
+def turn_off_relays():
+    with open("api/resources/relays.json", "r") as json_file:
+        data = json.load(json_file)
+
+    for i in range(len(data)):
+        if data[i]['state'] == "off":
+            GPIO.output(int(data[i]['relay_number']), GPIO.LOW)

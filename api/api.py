@@ -2,7 +2,7 @@ from flask import Flask
 from flask_restful import Resource, Api, reqparse
 from api.resources.set_resources import add_new_relay, update_relay
 from api.resources.get_resources import get_all_relays
-from gpio_control.gpio_control import turn_on_relays
+from gpio_control.gpio_control import turn_on_relays, turn_off_relays
 
 app = Flask(__name__)
 api = Api(app)
@@ -46,7 +46,10 @@ class Relay(Resource):
                 else:
                     data[i]['state'] = args['state']
                     update_relay(data)
-                    turn_on_relays()
+                    if args['state'] == "off":
+                        turn_on_relays()
+                    elif args['state'] == "on":
+                        turn_off_relays()
                     return 200
 
 
