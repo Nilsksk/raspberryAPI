@@ -26,8 +26,9 @@ GPIO.output(21, GPIO.LOW)
 def turn_on_relays():
     time.sleep(5)
     print("test")
-    with open("raspberryAPI/api/resources/relays.json", "r") as json_file:
+    with open("../api/resources/relays.json", "r") as json_file:
         data = json.load(json_file)
+        print(data)
 
     for i in range(len(data)):
         if data[i]['state'] == "on":
