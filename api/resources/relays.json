@@ -1,12 +1,20 @@
-{
-    "relay": [
-        {
-            "id": 0,
-            "name": "Zimmer 0"
-        },
-        {
-            "id": 1,
-            "name": "Zimmer 1"
-        }
-    ]
-}
+[
+    {
+        "id": 0,
+        "name": "Zimmer 1",
+        "relay_number": 1,
+        "state": "on"
+    },
+    {
+        "id": 1,
+        "name": "Zimmer 2",
+        "relay_number": 2,
+        "state": "on"
+    },
+    {
+        "id": 2,
+        "name": "Zimmer 3",
+        "relay_number": 3,
+        "state": "off"
+    }
+]
