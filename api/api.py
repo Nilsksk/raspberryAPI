@@ -46,9 +46,9 @@ class Relay(Resource):
                 else:
                     data[i]['state'] = args['state']
                     update_relay(data)
-                    if args['state'] == "off":
+                    if args['state'] == "on":
                         turn_on_relays()
-                    elif args['state'] == "on":
+                    elif args['state'] == "off":
                         turn_off_relays()
                     return 200
 
