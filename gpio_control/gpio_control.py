@@ -13,14 +13,14 @@ GPIO.setup(15, GPIO.OUT)
 GPIO.setup(19, GPIO.OUT)
 GPIO.setup(21, GPIO.OUT)
 
-GPIO.output(3, GPIO.LOW)
-GPIO.output(5, GPIO.LOW)
-GPIO.output(7, GPIO.LOW)
-GPIO.output(11, GPIO.LOW)
-GPIO.output(13, GPIO.LOW)
-GPIO.output(15, GPIO.LOW)
-GPIO.output(19, GPIO.LOW)
-GPIO.output(21, GPIO.LOW)
+GPIO.output(3, GPIO.HIGH)
+GPIO.output(5, GPIO.HIGH)
+GPIO.output(7, GPIO.HIGH)
+GPIO.output(11, GPIO.HIGH)
+GPIO.output(13, GPIO.HIGH)
+GPIO.output(15, GPIO.HIGH)
+GPIO.output(19, GPIO.HIGH)
+GPIO.output(21, GPIO.HIGH)
 
 
 def turn_on_relays():
