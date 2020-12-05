@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
-from resources.set_resources import add_new_relay, update_relay
-from resources.get_resources import get_all_relays
+from api.resources.set_resources import add_new_relay, update_relay
+from api.resources.get_resources import get_all_relays
 
 app = Flask(__name__)
 api = Api(app)
@@ -50,5 +50,3 @@ class Relay(Resource):
 
 api.add_resource(Relay, '/relay')
 
-if __name__ == '__main__':
-    app.run()
