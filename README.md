@@ -1,1 +1,1 @@
-# Created an API to control the GPIO Pins on my raspberry pi from my local Network
+# Created an API to control the GPIO Pins on my Raspberry Pi from my local Network
