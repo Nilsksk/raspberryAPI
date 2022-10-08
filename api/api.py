@@ -51,6 +51,7 @@ class Relay(Resource):
 
                     if args['state'] == "on":
                         turn_on_relays()
+                        print("on")
                     else:
                         turn_off_relays()
                     return 200
