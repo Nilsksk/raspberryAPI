@@ -1,5 +1,5 @@
 # Used for API
 flask==1.1.2
 flask-restful==0.3.8
-flask-cors==3.0.9
+flask-cors==4.0.2
 itsdangerous==2.0.1
